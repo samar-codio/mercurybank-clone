@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALLENGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <div class="login-container" id="login-section">
+        <div class="logo-main">
+            <img src="/challenge/mercury-logo-icon.svg" width="30px">
+        </div>
+        <form class="login-box" id="login-form">
+            <h2>Log In</h2>
+            <label>Email</label>
+            <input class="input-box" type="email" id="email" required>
+            <label>Password</label>
+            <div class="password-row">
+                <input class="input-box" style="width: 100%;"  type="password" id="password" required>
+                <button type="button" id="toggle-password" tabindex="-1">👁️</button>
+                
+            </div>
+            <button type="submit" class="login-btn">Log In</button>
+            <button type="button" class="signup-btn" id="signup-btn">Sign Up</button>
+        </form>
+    </div>
+ <div class="container">
+            <!-- Dashboard Section -->
+            <div class="dashboard" id="dashboard-section" style="display:none; background:#f7f8fa;">
+                <aside class="sidebar" style="background:#fff; color:#222; box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+                    <div class="logo">
+                        <img  src="/challenge/mercury-logo-icon.svg" width="25px">
+                        MERCURY</div>
+                    <nav>
+                            
+                        <ul>
+                            
+                            <li class="active"> <svg viewBox="0 0 20 20"><path d="M10 2L2 7v11h16V7l-8-5zm0 2.18L16 7.05V17H4V7.05l6-2.87zM8 9h4v6H8V9z"/></svg>Home</li>
+                            <li> <svg viewBox="0 0 20 20"><path d="M3 3h14v2H3V3zm0 4h14v2H3V7zm0 4h14v2H3v-2zm0 4h14v2H3v-2z"/></svg>Tasks <span class="badge-desktop">10</span></li>
+                            <li> <svg viewBox="0 0 20 20"><path d="M17 3H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 2v.01L10 9 3 5.01V5h14zM3 17V7.24l7 4.13 7-4.13V17H3z"/></svg>Transactions</li>
+                            <li> <svg viewBox="0 0 20 20"><path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 12.93V15h-2v-.07A6.002 6.002 0 0 1 4.07 11H5v-2h-.93A6.002 6.002 0 0 1 9 4.07V5h2v-.93A6.002 6.002 0 0 1 15.93 9H15v2h.93A6.002 6.002 0 0 1 11 15.93z"/></svg>Payments</li>
+                            
+                            <li class="sidebar-section-title desktop-only">Workflows</li>
+                            <li class="desktop-only"> <svg viewBox="0 0 20 20"><path d="M2 6h16v2H2V6zm0 4h16v2H2v-2zm0 4h16v2H2v-2z"/></svg>Bill Pay</li>
+                            <li class="desktop-only"> <svg viewBox="0 0 20 20"><path d="M4 4h12v2H4V4zm0 4h12v2H4V8zm0 4h8v2H4v-2z"/></svg>Invoicing</li>
+                            <li class="desktop-only"> <svg viewBox="0 0 20 20"><path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 12.93V15h-2v-.07A6.002 6.002 0 0 1 4.07 11H5v-2h-.93A6.002 6.002 0 0 1 9 4.07V5h2v-.93A6.002 6.002 0 0 1 15.93 9H15v2h.93A6.002 6.002 0 0 1 11 15.93z"/></svg>Reimbursements</li>
+                            <li class="desktop-only"> <svg viewBox="0 0 20 20"><path d="M2 6h16v2H2V6zm0 4h16v2H2v-2zm0 4h16v2H2v-2z"/></svg>Accounting</li>
+                        </ul>
+                    </nav>
+                </aside>
+                <main class="main-content">
+                    <header class="dashboard-header">
+                        <div class="header-left">
+                            <h4>Welcome, Samar <span id="user-email">Samar</span></h4>
+                        </div>
+                        <div class="header-center">
+                            <div class="search-bar">
+                                <input type="text" placeholder="Search...">
+                                <span class="search-icon">
+                                    <svg width="100" height="18" fill="currentColor" viewBox="0 0 24 24"></svg>
+                                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99a1 1 0 0 0 1.41-1.41l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <button class="notification-btn" title="Notifications" style="border-radius: 40%; overflow: hidden;">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 2a6 6 0 0 1 6 6v3.586l.707.707A1 1 0 0 1 16.293 14H3.707a1 1 0 0 1-.707-1.707L4 11.586V8a6 6 0 0 1 6-6zm0 16a2 2 0 0 0 2-2H8a2 2 0 0 0 2 2z"/>
+                                </svg>
+                            </button>
+                            <button id="logout-btn">Logout</button>
+                        </div>
+                    </header>
+                    <!-- Hero Section -->
+                    <section class="hero-section">
+                        <img class="hero-img-full" src="/challenge/murcury" alt="Smooth abstract illustration">
+                    </section>
+                    <!-- End Hero Section -->
+
+                    <!-- Balance and Accounts Cards Section -->
+                    <section class="cards-section">
+                        <div class="balance-card">
+                            <div class="balance-title">Account Balance</div>
+                            <div class="balance-amount">$12,500.00</div>
+                            <div class="balance-sub">Last 30 days</div>
+                            <div class="balance-stats">
+                                <span class="stat-up">+ $1,200</span>
+                                <span class="stat-down">- $300</span>
+                            </div>
+                        </div>
+                        <div class="accounts-card">
+                            <div class="accounts-title">Accounts</div>
+                            <ul class="accounts-list">
+                                <li>Credit Card <span class="account-amount">$2,500.00</span></li>
+                                <li>Checking <span class="account-amount">$7,000.00</span></li>
+                                <li>Savings <span class="account-amount">$3,000.00</span></li>
+                                <li>Profit Account <span class="account-amount">$0.00</span></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- End Balance and Accounts Cards Section -->
+                    <section class="money-section">
+                        <div class="money-summary">
+                            <div class="money-box">
+                                <div class="money-title">Credit</div>
+                                <div class="money-amount" id="credit-amount">$0.00</div>
+                            </div>
+                            <div class="money-box">
+                                <div class="money-title">Checking</div>
+                                <div class="money-amount" id="checking-amount">$0.00</div>
+                            </div>
+                            <div class="money-box">
+                                <div class="money-title">Profit Account</div>
+                                <div class="money-amount" id="profit-amount">$0.00</div>
+                            </div>
+                            
+                        </div>
+                                                <!-- Info Cards Section: Credit Card, Bill Pay, Invoicing -->
+                        <section class="info-cards-section">
+                            <div class="info-card">
+                                <div class="info-card-title">Credit Card</div>
+                                <div class="info-card-amount">$12,505.87</div>
+                                <div class="info-card-bar">
+                                    <span class="info-card-balance">Balance</span>
+                                </div>
+                                <div class="info-card-footer">
+                                    <span class="info-card-autopay">Autopay Jul 21</span>
+                                    <button class="info-card-pay">Pay</button>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-title">Bill Pay</div>
+                                <div class="info-card-details">
+                                    <span>Outstanding <b>11</b></span>
+                                    <span>Overdue <b>1</b></span>
+                                    <span>Due soon <b>-</b></span>
+                                </div>
+                                
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-title">Invoicing</div>
+                                <div class="info-card-details">
+                                    <span>Overdue <b>4 · $950.00</b></span>
+                                    <span>Paid <b>12 · $6K</b></span>
+                                </div>
+                                <div class="info-card-footer">
+                                    <span>Open <b>12 invoices · $12.3K</b></span>
+                                  
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End Info Cards Section -->
+                    </section>
+                    <div class="balance-graph-card" style="background:#fff; border-radius:18px; padding:28px 24px 18px 24px; margin-top:32px; box-shadow:0 2px 16px rgba(0,0,0,0.10);">
+                        <div style="display:flex; align-items:center; justify-content:space-between;">
+                            <div>
+                                <span style="font-size:1.1em; color:#222;">Mercury balance</span>
+                                <span style="margin-left:8px; background:#e6e8f0; border-radius:50%; padding:2px 7px; font-size:0.9em; color:#27ae60;">&#10003;</span>
+                            </div>
+                            <div>
+                                <button style="background:#e6e8f0; border:none; border-radius:8px; padding:6px 10px; color:#222; cursor:pointer;">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M3 17V7.24l7 4.13 7-4.13V17H3z"/></svg>
+                                </button>
+                                <button style="background:#e6e8f0; border:none; border-radius:8px; padding:6px 10px; color:#222; cursor:pointer;">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M3 3h14v2H3V3zm0 4h14v2H3V7zm0 4h14v2H3v-2zm0 4h14v2H3v-2z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div style="font-size:2.2em; font-weight:700; color:#222; margin-top:10px;">
+                            $5,216,471.<span style="font-size:0.7em; vertical-align:super;">18</span>
+                        </div>
+                        <div style="display:flex; align-items:center; margin-top:8px;">
+                            <span style="color:#555; font-size:1em;">Last 30 days</span>
+                            <span style="margin-left:8px; color:#555; font-size:1em;">&#9660;</span>
+                        </div>
+                        <div style="margin-top:18px; display:flex; gap:32px; font-size:1.1em;">
+                            <span style="color:#27ae60; font-weight:bold; display:flex; align-items:center;">
+                                <span style="font-size:1.3em; margin-right:6px;">&#8593;</span>
+                                <span>+$1.7M</span>
+                            </span>
+                            <span style="color:#e74c3c; font-weight:bold; display:flex; align-items:center;">
+                                <span style="font-size:1.3em; margin-right:6px;">&#8595;</span>
+                                <span>-$419K</span>
+                            </span>
+                        </div>
+                        <div style="margin-top:18px;">
+                            <canvas id="money-graph" width="320" height="120" style="width:100%; max-width:420px; background:transparent;"></canvas>
+                            <div style="display:flex; justify-content:space-between; color:#888; font-size:0.95em; margin-top:8px;">
+                                <span>Jun 21</span>
+                                <span>Jun 26</span>
+                                <span>Jul 1</span>
+                                <span>Jul 6</span>
+                                <span>Jul 11</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+
+    </div> 
+    <script src="script.js"></script>
+    <!-- Add Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Example: Draw a simple line chart on the money-graph canvas
+      const ctx = document.getElementById('money-graph').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Jun 21', 'Jun 26', 'Jul 1', 'Jul 6', 'Jul 11'],
+          datasets: [{
+            label: 'Balance',
+            data: [4200000, 4700000, 5000000, 5200000, 5216471],
+            borderColor: '#27ae60',
+            backgroundColor: 'rgba(39, 174, 96, 0.1)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 4,
+            pointBackgroundColor: '#27ae60'
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { display: false },
+            y: { display: false }
+          }
+        }
+      });
+    </script>
+</body>
+</html>
